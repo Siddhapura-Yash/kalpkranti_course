@@ -209,7 +209,7 @@ obj_dir/Vdisplay
 
 ## Other Graphics Examples 
 For a simple guide on how to change screen patterns, 
-see the [RTL Folder Guide](rtl/README.md).
+see the [RTL Folder Guide](./rtl/README.md)
 
 ## Important Note (Very Important)
 
