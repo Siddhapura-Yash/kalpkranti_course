@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GPDProject version="40" oldestCompatibleVersion="32" GPDVersion="6.52.001" lastChange="17 Feb 2026 11:49:25" projectChecksumState="1" projectChecksum="3bdee7c5">
+<GPDProject version="40" oldestCompatibleVersion="32" GPDVersion="6.52.001" lastChange="17 Feb 2026 17:02:23" projectChecksumState="0" projectChecksum="f268850b">
     <generalProjectSettings/>
     <chip family="04" type="06" friendlyName="FFPGA" partNumber="67" package="26">
         <nvmData registerLenght="480">0 0 0 28 0 0 0 0 A5 A5 A5 A5 0 0 0 0 0 0 0 0 5A 5A 5A 5A 0 0 0 0 22 22 22 22 22 22 22 22 22 22 0 0 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</nvmData>
@@ -652,19 +652,18 @@
             </synthesize>
         </settings>
         <openedTabs>
-            <openedTab>top.v</openedTab>
             <openedTab>I/O Planner</openedTab>
+            <openedTab>top.sdc</openedTab>
             <openedTab>tb_pr_emphasis.v</openedTab>
-            <openedTab>pr_emphasis.v</openedTab>
         </openedTabs>
         <pipelineStagesStates>
             <pipelineStageState>
                 <pipelineStage>0</pipelineStage>
-                <pipelineState>1</pipelineState>
+                <pipelineState>0</pipelineState>
             </pipelineStageState>
             <pipelineStageState>
                 <pipelineStage>1</pipelineStage>
-                <pipelineState>1</pipelineState>
+                <pipelineState>0</pipelineState>
             </pipelineStageState>
         </pipelineStagesStates>
         <modules>
