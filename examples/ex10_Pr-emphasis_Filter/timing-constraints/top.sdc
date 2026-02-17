@@ -1,1 +1,0 @@
-create_clock -period 20.000 i_clk
