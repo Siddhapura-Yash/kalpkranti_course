@@ -211,5 +211,34 @@ To try a different pattern:
 2. Copy its contents.
 3. Replace the contents of `graphics.v` with that code.
 4. Recompile and run the simulation.
+  
+## Important Note (Very Important)
 
-This allows you to quickly test different graphics patterns on the VGA screen.
+Do not keep this project inside a folder that has spaces in its name.
+
+If there are spaces, the simulation will fail with an error like:
+
+Unsupported: GNU Make cannot build in directories containing spaces
+
+Example:
+```
+Wrong folder path (spaces are highlighted): ~/Downloads/VGA Project/ rtl
+                                                           ^        ^
+                                                         space    space
+```
+Correct folder path (no spaces):
+~/Downloads/vga_project/rtl
+
+How to fix it:
+
+1. Go to the Downloads folder:
+   cd ~/Downloads
+
+2. Rename the folder to remove spaces:
+   mv "VGA Project" vga_project
+
+3. Go back to the project:
+   cd vga_project/rtl
+
+Now run the simulation again.
+
