@@ -1,3 +1,4 @@
+// Project integration: Yash Siddhapura | siddhapurayash09@gmail.com
 module graphics (
     input  wire        clk,
     input  wire        reset,
