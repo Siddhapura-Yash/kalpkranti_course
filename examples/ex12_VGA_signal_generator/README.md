@@ -1,4 +1,4 @@
-# VGA Bouncing Ball in Verilog
+# VGA Signal Generator in Verilog
 
 VGA technology works by transmitting a video signal that includes separate red, green, and blue color signals along with horizontal and vertical sync signals from devices like computers and DVD players to displays such as monitors and projectors.
 
@@ -16,14 +16,14 @@ VGA technology works by transmitting a video signal that includes separate red, 
 ## 1. Introduction
 
 This project implements a minimal VGA graphics system in Verilog.  
-It generates a 640×480 @60Hz VGA signal and displays a bouncing ball animation.
+It generates a 640×480 @60Hz VGA signal and displays different VGA test patterns.
 
 The image is not stored in memory.  
 Instead, it is generated pixel by pixel in real time using simple logic.
 
 The design consists of three modules connected in sequence:
 
-vga_controller → graphics → display → VGA output
+display module → vga_controller → graphics → VGA output
 
 Each module performs a specific role in generating the video signal.
 
@@ -55,7 +55,7 @@ Each pixel is generated on every clock cycle.
 
 ### VGA Timing (640×480 @60Hz)
 
-![VGA Timing](docs/images/vga_timing.png)
+![VGA Timing](docs/assests/vga_timing.png)
 
 
 ### Total pixels per frame
@@ -161,7 +161,10 @@ sudo apt-get install libglu1-mesa-dev freeglut3-dev mesa-common-dev
 ```
 Open terminal in the rtl folder and compile design :
 ```
-verilator -Wall --cc --exe simulator.cpp display.v -LDFLAGS -lglut -LDFLAGS -lGLU -LDFLAGS -lGL
+
+verilator -Wall --cc --exe src/simulator.cpp display.v graphics.v vga_controller.v \
+-LDFLAGS -lglut -LDFLAGS -lGLU -LDFLAGS -lGL
+
 ```
 
 Build the executable:
@@ -172,7 +175,6 @@ Run the simulation:
 ```
 obj_dir/Vdisplay
 ```
-<<<<<<< HEAD
 
 ---
 
@@ -184,36 +186,18 @@ obj_dir/Vdisplay
 
 **VGA Output**
 
-<img src="results/vga_output.png" width="300">
+<img src="sim/vga_output.png" width="300">
 
 </td>
 <td align="center">
 
 **Simulation Video**
 
-<a href="results/vga_demo.mp4">
-<img src="results/video_thumb.png" width="300">
-</a>
+<img src="sim/vga_demo.gif" width="300">
 
 </td>
 </tr>
 </table>
-
----
-
-## Other Graphics Examples
-
-Additional pattern examples are provided as separate files.
-
-To try a different pattern:
-
-1. Open the desired pattern file.
-2. Copy its contents.
-3. Replace the contents of `graphics.v` with that code.
-4. Recompile and run the simulation.
-
-This allows you to quickly test different graphics patterns on the VGA screen.
->>>>>>> 919ef17 (added new patterns and result of simulation)
 
 ---
 
