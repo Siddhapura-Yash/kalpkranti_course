@@ -29,7 +29,7 @@ sim/
   tb_pr_emphasis.v Testbench for the filter block
 
 firmware/
-  test.py          Host script (MicroPython on Shrike) - sends samples, checks FPGA output
+  ex10.py          Host script (MicroPython on Shrike) - sends samples, checks FPGA output
 
 timing-constraints/
   top.sdc          50 MHz clock constraint
@@ -48,11 +48,11 @@ gtkwave pre_emphasis.vcd
 
 ## Hardware
 
-- Open `test.ffpga` in your FPGA toolchain to build the bitstream
+- Open [ex10.ffpga](../../fpga/shrike_v1/ex10.ffpga) in your FPGA toolchain to build the bitstream (do not modify the original)
 - Baud rate: 115200
 - Protocol: send two bytes per sample (MSB first, big-endian signed 16-bit)
 - FPGA echoes filtered output in the same format
 
 ## Firmware Test
 
-Run `test.py` on the Shrike MCU. It sends 20 random samples, compares FPGA output to a software reference, and prints pass/fail.
+Run `ex10.py` on the Shrike MCU. It sends 20 random samples, compares FPGA output to a software reference, and prints pass/fail.
