@@ -160,11 +160,11 @@ sudo apt-get install verilator
 sudo apt-get install libglu1-mesa-dev freeglut3-dev mesa-common-dev
 ```
 Open terminal in the rtl folder and compile design :
+
 ```
-
-verilator -Wall --cc --exe src/simulator.cpp display.v graphics.v vga_controller.v \
+verilator -Wall -Wno-UNUSEDSIGNAL -Wno-UNUSEDPARAM -Wno-SYNCASYNCNET \
+--cc --exe src/simulator.cpp display.v graphics.v vga_controller.v \
 -LDFLAGS -lglut -LDFLAGS -lGLU -LDFLAGS -lGL
-
 ```
 
 Build the executable:
@@ -213,4 +213,3 @@ To try a different pattern:
 4. Recompile and run the simulation.
 
 This allows you to quickly test different graphics patterns on the VGA screen.
-
