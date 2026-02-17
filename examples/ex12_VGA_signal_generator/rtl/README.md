@@ -28,6 +28,7 @@ checkboard_pattern.v
 Horizontal_color_bands.v
 moving_vertical_bar.v
 RGB_vertical_bars.v
+Bouncing_ball.v
 ```
 
 ---
@@ -63,18 +64,10 @@ verilator -Wall -Wno-fatal --cc --exe src/simulator.cpp display.v graphics.v vga
 -LDFLAGS -lglut -LDFLAGS -lGLU -LDFLAGS -lGL
 
 make -j -C obj_dir -f Vdisplay.mk Vdisplay
+
 obj_dir/Vdisplay
 ```
 
 You will now see the new pattern on the VGA screen.
 
----
-
-## Summary (Quick steps)
-
-1. Go to `rtl/pattern/`
-2. Open any pattern file
-3. Copy its code
-4. Paste into `graphics.v`
-5. Run simulation again
 
