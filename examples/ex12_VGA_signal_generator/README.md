@@ -176,42 +176,41 @@ Run the simulation:
 obj_dir/Vdisplay
 ```
 
----
-
 ## Simulation Result
+
+<div align="center">
 
 <table>
 <tr>
 <td align="center">
 
-**VGA Output**
-
-<img src="sim/vga_output.png" width="300">
+**VGA Output**  
+<br>
+<img src="sim/vga_output.png" height="240">
 
 </td>
+
+<td width="80"></td>
+
 <td align="center">
 
-**Simulation Video**
-
-<img src="sim/vga_demo.gif" width="300">
+**Simulation Video**  
+<br>
+<img src="sim/vga_demo.gif" height="240">
 
 </td>
 </tr>
 </table>
 
+</div>
+
+
 ---
 
-## Other Graphics Examples
+## Other Graphics Examples 
+For a simple guide on how to change screen patterns, 
+see the [RTL Folder Guide](rtl/README.md).
 
-Additional pattern examples are provided as separate files.
-
-To try a different pattern:
-
-1. Open the desired pattern file.
-2. Copy its contents.
-3. Replace the contents of `graphics.v` with that code.
-4. Recompile and run the simulation.
-  
 ## Important Note (Very Important)
 
 Do not keep this project inside a folder that has spaces in its name.
@@ -241,4 +240,3 @@ How to fix it:
    cd vga_project/rtl
 
 Now run the simulation again.
-
