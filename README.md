@@ -109,4 +109,3 @@ kalpkranti-course/
 └──
 
 ```
-# demo
